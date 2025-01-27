@@ -1,12 +1,12 @@
-Variants how to test this program
+<h1>Variants how to execute/run/test</h1>
 
-(Works on linux, Ubuntu)
-1) execute main.exe with numbers as parameters
-example: ./main.exe 1 2 3 4
+<h2> On Linux</h2>
+1) execute main.exe with numbers as parameters, example:
+ <br> ./main.exe 1 2 3 4<br>
 
-(Must be golang installed)
+<h2> Must be installed GO</h2>
 2) Edit (optional) main_test.go then run:
-    go test
+   <br> go test   
 
-3) Run:
+3) Run: <br>
     go run main.go {numbers here}
