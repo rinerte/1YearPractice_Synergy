@@ -19,7 +19,7 @@ func main() {
 			panic(error)
 		}
 
-		totalSum += number
+		
 		if number < min {
 			min = number
 			minSum = totalSum
@@ -28,13 +28,12 @@ func main() {
 			max = number
 			maxSum = totalSum
 		}
+		totalSum += number
 	}
 
 	var result = maxSum - minSum
-	if result < 0 {
-		result = -result
+	if result<0 {
+		result = -result - max
 	}
-	fmt.Println(minSum)
-	fmt.Println(maxSum)
-	fmt.Println("The sum between Max and Min elements = ", result)
+	fmt.Println(result)
 }
