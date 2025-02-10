@@ -3,7 +3,9 @@ Console.WriteLine("Hello, World!");
 
 List<Figure> figures = new List<Figure>{
     new Triangle(5),
-    new Triangle(3,4,5)
+    new Triangle(3,4,5),
+    new Square(4),
+    new Square(2)
 };
 
 foreach (var figure in figures){
