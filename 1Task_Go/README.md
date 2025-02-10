@@ -1,14 +1,13 @@
-<h1>Variants how to execute/run/test</h1>
-<h3> On linux</h3>
- -  execute firstTask with numbers as parameters, example: <br>
- ./firstTask 1 2 3 4
+<h1>Task:</h1>
+Дан одномерный массив А размерности N. Найти сумму отрицательных элементов, расположенных между максимальным и минимальным. <br>
+Ответом на задачу будет ссылка на репозиторий GitHub, где хранится Ваша программа. Или иным удобным для Вас способом.
 
- <h3> On Windows</h3>
- -  execute main.exe with numbers as parameters, example: <br>
- ./main.exe 1 2 3 4
-
+<h3>Successful tests run</h3>
+![tests](screenshots/tests_screenshot.png)
+<h2>Variants how to execute/run/test</h2>
 <h3>Must be installed GO </h3>
 - Edit (optional) main_test.go then run:
    <br> go test<br>
-- Run: <br>
-   go run main.go {numbers here}
+- Or: <br>
+   go run main.go {numbers here}<br>
+   Example: go run main.go 1 2 3 4 5
