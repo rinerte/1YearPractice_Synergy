@@ -2,7 +2,8 @@
 Дан одномерный массив А размерности N. Найти сумму отрицательных элементов, расположенных между максимальным и минимальным. <br>
 Ответом на задачу будет ссылка на репозиторий GitHub, где хранится Ваша программа. Или иным удобным для Вас способом.
 
-<h3>Successful tests run</h3>
+<h3>Tests result:</h3>
+
 ![tests](screenshots/tests_screenshot.png)
 <h2>Variants how to execute/run/test</h2>
 <h3>Must be installed GO </h3>
