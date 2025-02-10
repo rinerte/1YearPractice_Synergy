@@ -1,11 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-
+﻿
 List<Figure> figures = new List<Figure>{
-    new Triangle(5),
+    new Triangle(4),
     new Triangle(3,4,5),
     new Square(4),
-    new Square(2)
+    new Circle(4)
 };
 
 foreach (var figure in figures){
