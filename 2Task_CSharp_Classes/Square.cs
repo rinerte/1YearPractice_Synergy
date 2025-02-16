@@ -10,4 +10,7 @@ public class Square : Figure {
     public override double GetPerimeter(){
         return 4*side;
     }
+    public override void Show(){
+        Console.WriteLine("This method from child class");
+    }
 }

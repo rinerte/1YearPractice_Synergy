@@ -13,3 +13,10 @@ foreach (var figure in figures){
     Console.WriteLine($"{perimimeter}: {figure.GetPerimeter():F2} \n");
 }
 
+Geometry g = new();
+Square s = new(4);
+Triangle t = new(4);
+
+g.Show();
+s.Show();
+t.Show();
