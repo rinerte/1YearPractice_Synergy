@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace tourism_aspnet;
 
 public class Program
@@ -10,6 +12,15 @@ public class Program
             
         builder.Services.AddControllers();
         
+        builder.Services.AddCors(options =>{
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+
         var app = builder.Build();
 
         app.UseHttpsRedirection();
@@ -17,7 +28,9 @@ public class Program
         app.UseAuthorization();
 
         app.MapControllers();
-
+        
+        app.UseCors("AllowAll");
+        
         app.Run();
     }
 }
