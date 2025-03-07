@@ -19,32 +19,35 @@ func computeSumBetweenMaxAndMin(args []string) (int, error) {
 	var max = math.MinInt64
 	var min = math.MaxInt64
 
-	var totalSum, minSum, maxSum int
-	var right = true
+	array := make([]int, 0, 10)
+	minIndex := 0
+	maxIndex := 0
 
 	for i := 1; i < len(args); i++ {
 		number, err := strconv.Atoi(args[i])
 		if err != nil {
 			return 0, err
 		}
-
 		if number < min {
 			min = number
-			minSum = totalSum
-			right = false
+			minIndex = i - 1
 		}
 		if number > max {
 			max = number
-			maxSum = totalSum
-			right = true
+			maxIndex = i - 1
 		}
-		totalSum += number
+		array = append(array, number)
 	}
-	var result = 0
-	if right {
-		result = maxSum - minSum - min
-	} else {
-		result = minSum - maxSum - max
+
+	result := 0
+
+	if maxIndex < minIndex {
+		maxIndex, minIndex = minIndex, maxIndex
+	}
+	for i := minIndex + 1; i < maxIndex; i++ {
+		if array[i] < 0 {
+			result += array[i]
+		}
 	}
 
 	return result, nil
